@@ -9,39 +9,45 @@
 	</head>
 	<body>
         <div class="container">
-            <h1 style="text-align:center;">Мой деканат</h1>
+            <h1 style="text-align:center;">My Deanery</h1>
 
-            <h2>Успеваемость студентов</h2>
+            <h2>Student Performance</h2>
             <table class="table table-striped">
                 <thead>
                 <tr>
                   <th>#</th>
-                  <th>ФИО</th>
-                  <th>ТиМП</th>
-                  <th>ЭиС</th>
-                  <th>Философия</th>
-                  <th>Иностранный язык</th>
-                  <th>Физическая культура</th>
-                  <th>Средний балл</th>
+                  <th>Name</th>
+                  <th>Course</th>
+                  <th>Group</th>
+                  <th>Chemistry</th>
+                  <th>Physics</th>
+                  <th>Math</th>
+                  <th>Philosophy</th>
+                  <th>Computer Science</th>
+                  <th>Average Score</th>
                 </tr>
                 </thead>
                 <tbody>
                     {% for student in students_statistics %}
                         <tr>
                             <th scope="row">{{student.id}}</th>
-                            <td>{{student.fio}}</td>
-                            <td>{{student.timp}}</td>
-                            <td>{{student.eis}}</td>
-                            <td>{{student.philosophy}}</td>
-                            <td>{{student.english}}</td>
-                            <td>{{student.sport}}</td>
-                            <td>{{student.average}}</td>
+                            <td>{{student.name}}</td>
+                            <td>{{student.course}}</td>
+                            <td>{{student.group}}</td>
+                            <td>{{student.Chemistry}}</td>
+                            <td>{{student.Physics}}</td>
+                            <td>{{student.Math}}</td>
+                            <td>{{student.Philosophy}}</td>
+                            <td>{{student.ComputerScience}}</td>
+                            <td>{{student.AverageScore}}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
-            <h4>Отличники:{{excellent_students}}</h4>
-            <h4>Отчислить:{{bad_students}}</h4>
+            <h4>Excelent Students: {{excellent_students}}</h4>
+            <h4>To Deduction: {{bad_students}}</h4>
+            <h4>Difficult Subjects: {{difficult_subjects}}</h4>
+            <h4>Easy Subjects: {{easy_subjects}}</h4>
         </div>
 	</body>
 </html>
