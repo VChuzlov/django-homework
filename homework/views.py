@@ -54,7 +54,7 @@ class IndexView(TemplateView):
                 'Physics': 2,
                 'Math': 3,
                 'Philosophy': 3,
-                'ComputerScience': 2,
+                'ComputerScience': 3,
             },
 
             {
@@ -149,7 +149,7 @@ class Creator:
         self.student_id_list = [self.data[i]['id'] for i in range(data_len)]
         self.student_name_list = [self.data[i]['name'] for i in range(data_len)]
         self.group_list = [self.data[i]['group'] for i in range(data_len)]
-        
+
         self.student_score_list = [({subject: self.data[i][subject]
                                      for subject in self.subjects}) for i in range(data_len)]
 
